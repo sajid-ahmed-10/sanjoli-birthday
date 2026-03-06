@@ -1,0 +1,439 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd6ff, #e7c6ff);
+    overflow-x: hidden;
+}
+
+/* NAME STYLE */
+.name {
+    font-size: 3rem;
+    color: deeppink;
+}
+
+/* CROWN */
+.crown {
+    font-size: 50px;
+    animation: float 2s infinite ease-in-out;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-15px);}
+    100% { transform: translateY(0px);}
+}
+
+/* FRONT IMAGE */
+.front-img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 25px pink;
+}
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: hotpink;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* SLIDER */
+.slider-section {
+    display: none;
+}
+
+.slider {
+    width: 90%;
+    max-width: 350px;
+    margin: auto;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* HEARTS */
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.heart{
+position:absolute;
+color:pink;
+font-size:20px;
+animation:heartFloat 10s linear infinite;
+}
+
+@keyframes heartFloat{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+/* GLITTER PARTICLES */
+.glitter {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: glitterFade 1s linear forwards;
+}
+
+@keyframes glitterFade {
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+/* Banner */
+.banner{
+font-size:28px;
+font-weight:bold;
+color:#ff1493;
+margin-top:20px;
+animation:float 3s infinite;
+}
+
+/* Balloons */
+.balloons{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.balloon{
+width:30px;
+height:40px;
+background:pink;
+border-radius:50%;
+position:absolute;
+bottom:-50px;
+animation:rise 10s infinite;
+}
+
+.balloon:nth-child(1){left:10%; animation-delay:0s;}
+.balloon:nth-child(2){left:30%; animation-delay:2s;}
+.balloon:nth-child(3){left:60%; animation-delay:4s;}
+.balloon:nth-child(4){left:80%; animation-delay:6s;}
+
+@keyframes rise{
+from{transform:translateY(0);}
+to{transform:translateY(-120vh);}
+}
+
+/* Cake */
+.cake{
+font-size:80px;
+margin:20px;
+position:relative;
+}
+
+/* Candles */
+.candles{
+display:flex;
+justify-content:center;
+gap:8px;
+position:absolute;
+top:-30px;
+width:100%;
+}
+
+.candle{
+width:10px;
+height:30px;
+background:white;
+position:relative;
+cursor:pointer;
+}
+
+.flame{
+width:10px;
+height:15px;
+background:orange;
+border-radius:50%;
+position:absolute;
+top:-15px;
+animation:flicker 0.3s infinite;
+}
+
+@keyframes flicker{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+/* Smoke */
+.smoke{
+width:10px;
+height:10px;
+background:gray;
+border-radius:50%;
+position:absolute;
+top:-20px;
+opacity:0;
+}
+
+.smoke.active{
+animation:smokeRise 1s forwards;
+}
+
+@keyframes smokeRise{
+from{opacity:1; transform:translateY(0);}
+to{opacity:0; transform:translateY(-30px);}
+}
+/* POPUP BACKGROUND */
+.popup{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+
+justify-content:center;
+align-items:center;
+
+z-index:999;
+
+}
+
+
+/* POPUP BOX */
+.popup-content{
+
+background:linear-gradient(135deg,#ffd6ff,#ffc2d1);
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+animation:popupOpen 0.5s ease;
+
+}
+
+
+/* CLOSE BUTTON */
+.close-btn{
+
+position:absolute;
+right:20px;
+top:10px;
+
+font-size:28px;
+
+cursor:pointer;
+
+color:#ff1493;
+
+}
+
+
+/* FOOD ITEMS */
+.foods{
+
+display:flex;
+gap:40px;
+
+justify-content:center;
+
+margin-top:20px;
+
+}
+
+
+.food{
+
+font-size:50px;
+
+}
+
+
+.food p{
+
+font-size:18px;
+
+margin:5px 0;
+
+}
+
+
+/* ANIMATION */
+@keyframes popupOpen{
+
+from{
+
+transform:scale(0.5);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}.food-img{
+
+width:120px;
+height:120px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+box-shadow:0 0 15px pink;
+
+}
+
+#startScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:radial-gradient(circle,#1a001a,#000);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+/* gift container */
+
+.gift-container{
+text-align:center;
+cursor:pointer;
+}
+
+/* big gift */
+
+.gift{
+font-size:120px;
+animation:bounce 1.5s infinite;
+filter:drop-shadow(0 0 20px pink);
+transition:transform 0.4s;
+}
+
+/* hover */
+
+.gift:hover{
+transform:scale(1.2);
+}
+
+/* text */
+
+.gift-text{
+color:white;
+font-size:24px;
+margin-top:20px;
+animation:pulse 1.5s infinite;
+}
+
+/* bounce animation */
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+100%{transform:translateY(0)}
+}
+
+/* text pulse */
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:transparent;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(pink 1px, transparent 1px);
+background-size:40px 40px;
+animation:moveStars 60s linear infinite;
+z-index:-2;
+}
+
+@keyframes moveStars{
+from{transform:translateY(0)}
+to{transform:translateY(-1000px)}
+}
+
+
+.name{
+color:#fff;
+text-shadow:
+0 0 10px pink,
+0 0 20px pink,
+0 0 40px #ff66cc;
+}
+
+
+
+.sparkles::before,
+.sparkles::after{
+content:"✨";
+position:fixed;
+font-size:20px;
+animation:sparkleFloat 8s linear infinite;
+}
+
+.sparkles::after{
+left:80%;
+animation-delay:4s;
+}
+
+@keyframes sparkleFloat{
+0%{
+top:100%;
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+top:-10%;
+opacity:0;
+}
+}

@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19th Birthday Sanjoli 👑</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="stars"></div>
+
+  <div class="sparkles"></div>
+
+
+<!-- ================= START SURPRISE SCREEN ================= -->
+
+<div id="startScreen">
+
+<div class="gift-container" onclick="openGift()">
+
+<div class="gift">🎁</div>
+
+<p class="gift-text">Tap the Gift</p>
+
+</div>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgm" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+
+<!-- ================= MAIN WEBSITE ================= -->
+
+<div id="mainContent" style="display:none;">
+
+
+<!-- Floating Hearts -->
+<div class="hearts"></div>
+
+<!-- Floating Balloons -->
+<div class="balloons">
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+</div>
+
+
+
+<!-- LANDING PAGE -->
+<div class="landing">
+
+<!-- Birthday Banner -->
+<div class="banner">🎉 Happy Birthday 🎉</div>
+
+<!-- Crown -->
+<div class="crown">👑</div>
+
+<!-- Name -->
+<h1>
+Happy 19th Birthday <br>
+<span class="name">Sanjoli</span>
+</h1>
+
+
+<!-- Front Image -->
+<img src="images/front.jpg" class="front-img">
+
+
+<!-- Cake with Candles -->
+<div class="cake">
+
+<div class="candles">
+
+<div class="candle" onclick="blowCandle(this)">
+<div class="flame"></div>
+<div class="smoke"></div>
+</div>
+
+<div class="candle" onclick="blowCandle(this)">
+<div class="flame"></div>
+<div class="smoke"></div>
+</div>
+
+<div class="candle" onclick="blowCandle(this)">
+<div class="flame"></div>
+<div class="smoke"></div>
+</div>
+
+<div class="candle" onclick="blowCandle(this)">
+<div class="flame"></div>
+<div class="smoke"></div>
+</div>
+
+<div class="candle" onclick="blowCandle(this)">
+<div class="flame"></div>
+<div class="smoke"></div>
+</div>
+
+</div>
+
+<img src="images/cake.png" class="front-img">
+
+</div>
+
+
+<!-- Age Timer -->
+<div class="timer">
+
+<h3>Princess has existed for:</h3>
+
+<p id="ageTimer"></p>
+
+</div>
+
+
+<!-- Enter Button -->
+<button onclick="enterPalace()">
+Enter the Royal Palace ✨
+</button>
+
+</div>
+
+
+
+<!-- SLIDER SECTION -->
+<div class="slider-section" id="palace">
+
+<h2>Princess Moments 💖</h2>
+
+<div class="slider">
+
+<img src="images/pic1.jpg" class="slide active">
+<img src="images/pic2.jpg" class="slide">
+<img src="images/pic4.jpg" class="slide">
+<img src="images/pic5.jpg" class="slide">
+<img src="images/pic6.jpg" class="slide">
+
+</div>
+
+
+<div class="controls">
+
+<button onclick="prevSlide()">⟵</button>
+<button onclick="nextSlide()">⟶</button>
+
+</div>
+
+
+<div class="message">
+
+<h3>Dear Sanjoli 👑</h3>
+
+<p>
+Happy 19th Birthday, Princess 💖🎀
+</p>
+
+<p>
+You are a wonderful blend of sweetness, strength, and elegance.
+Your smile carries a kind of magic that makes people feel happy just being around you.
+</p>
+
+<p>
+I hope your life always stays as beautiful and bright as your heart.
+May this year bring you countless smiles, unforgettable moments, and all the happiness you truly deserve ✨🪻
+</p>
+
+<p>
+It's amazing that we met only in December, yet in such a short time we managed to create such a lovely bond 🙌🏻🫂
+</p>
+
+<p>
+Stay the amazing person you are.
+Once again 🌟 Happy Birthday Diya 🪔
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- FOOD POPUP -->
+<div id="foodPopup" class="popup">
+
+<div class="popup-content">
+
+<span class="close-btn" onclick="closePopup()">×</span>
+
+<h2>🎉 Here is your favs 🎉</h2>
+
+<div class="foods">
+
+<div class="food">
+<img src="images/momo.png" class="food-img">
+<p>Momo</p>
+</div>
+
+<div class="food">
+<img src="images/crab.jpg" class="food-img">
+<p>Crab</p>
+</div>
+
+<div class="food">
+<img src="images/lobster.jpg" class="food-img">
+<p>Lobster</p>
+</div>
+
+<div class="food">
+<img src="images/prawn.jpg" class="food-img">
+<p>Prawns</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
